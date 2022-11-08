@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="CADatabase\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Centro_animal.Entities\Centro_animal.Entities.csproj" />
+    <ProjectReference Include="..\Centro_animal_Services\Centro_animal_Services.csproj" />
+  </ItemGroup>
+
+</Project>
