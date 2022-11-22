@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.dataGridViewclient2 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dueño = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +42,7 @@
             this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fechanac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewclient2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,15 +89,28 @@
             this.Raza,
             this.Peso,
             this.FechaIngreso,
-            this.Fechanac});
-            this.dataGridViewclient2.Location = new System.Drawing.Point(22, 136);
+            this.Fechanac,
+            this.Genero});
+            this.dataGridViewclient2.Location = new System.Drawing.Point(12, 135);
             this.dataGridViewclient2.Name = "dataGridViewclient2";
             this.dataGridViewclient2.ReadOnly = true;
             this.dataGridViewclient2.RowTemplate.Height = 25;
             this.dataGridViewclient2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewclient2.Size = new System.Drawing.Size(973, 394);
+            this.dataGridViewclient2.Size = new System.Drawing.Size(989, 407);
             this.dataGridViewclient2.TabIndex = 4;
             this.dataGridViewclient2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewclient2_CellClick);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(1022, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 97);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Volver";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Id
             // 
@@ -143,32 +157,26 @@
             this.Peso.HeaderText = "Peso(KG/s)";
             this.Peso.Name = "Peso";
             this.Peso.ReadOnly = true;
+            this.Peso.Width = 80;
             // 
             // FechaIngreso
             // 
             this.FechaIngreso.HeaderText = "Fecha de Ingreso";
             this.FechaIngreso.Name = "FechaIngreso";
             this.FechaIngreso.ReadOnly = true;
-            this.FechaIngreso.Width = 120;
             // 
             // Fechanac
             // 
             this.Fechanac.HeaderText = "Fecha Nacimeinto";
             this.Fechanac.Name = "Fechanac";
             this.Fechanac.ReadOnly = true;
-            this.Fechanac.Width = 120;
             // 
-            // button1
+            // Genero
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(1022, 337);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 97);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Volver";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Genero.HeaderText = "Genero";
+            this.Genero.Name = "Genero";
+            this.Genero.ReadOnly = true;
+            this.Genero.Width = 80;
             // 
             // UIPacientes
             // 
@@ -193,6 +201,9 @@
         #endregion
         private TextBox textBoxBusqueda;
         private DataGridView dataGridViewclient2;
+        private Label label1;
+        private Button buttonmascotaselec;
+        private Button button1;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn nombre;
         private DataGridViewTextBoxColumn Dueño;
@@ -202,8 +213,6 @@
         private DataGridViewTextBoxColumn Peso;
         private DataGridViewTextBoxColumn FechaIngreso;
         private DataGridViewTextBoxColumn Fechanac;
-        private Label label1;
-        private Button buttonmascotaselec;
-        private Button button1;
+        private DataGridViewTextBoxColumn Genero;
     }
 }

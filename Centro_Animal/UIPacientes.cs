@@ -51,6 +51,7 @@ namespace Centro_AnimalUI
                 dataGridViewclient2.Rows[n].Cells[6].Value = mascota.PesoAnimal;
                 dataGridViewclient2.Rows[n].Cells[7].Value = mascota.fechaIngreso;
                 dataGridViewclient2.Rows[n].Cells[8].Value = mascota.fechaNacimento;
+                dataGridViewclient2.Rows[n].Cells[9].Value = mascota.sexo;
             }
         }
         private void cargardatosfiltrado(string dato)
@@ -69,6 +70,7 @@ namespace Centro_AnimalUI
                 dataGridViewclient2.Rows[n].Cells[6].Value = mascota.PesoAnimal;
                 dataGridViewclient2.Rows[n].Cells[7].Value = mascota.fechaIngreso;
                 dataGridViewclient2.Rows[n].Cells[8].Value = mascota.fechaNacimento;
+                dataGridViewclient2.Rows[n].Cells[9].Value = mascota.sexo;
             }
         }
 
@@ -95,6 +97,7 @@ namespace Centro_AnimalUI
             animatesconduenio.especie = int.Parse(dataGridViewclient2.SelectedCells[4].Value.ToString());
             animatesconduenio.raza = dataGridViewclient2.SelectedCells[5].Value.ToString();
             animatesconduenio.PesoAnimal = double.Parse(dataGridViewclient2.SelectedCells[6].Value.ToString());
+            animatesconduenio.sexo = int.Parse(dataGridViewclient2.SelectedCells[9].Value.ToString()); ;
 
         }
 

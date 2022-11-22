@@ -26,7 +26,7 @@ namespace Centro_AnimalUI
             regisanimal2 = regisanimal1;
             label2animal.Text= "Mascota: " + regisanimal1.NombreAnimal + "    ID: " + regisanimal1.IDanimal + "\nEspecie: " +
                        validaciones.VerEspecie(regisanimal1.especie) + "    Raza: " + regisanimal1.raza + "\nGenero: " +
-                        regisanimal1.sexo;
+                        validaciones.VerGenero(regisanimal1.sexo);
             comboBox1.DataSource = dataService.GETVeterinarios();
             comboBox1.DisplayMember = "nombre";
             comboBox1.ValueMember = "Id";

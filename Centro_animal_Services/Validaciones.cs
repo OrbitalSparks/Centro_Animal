@@ -18,6 +18,14 @@ namespace Centro_animal_Services
             return String.Empty;
         }
 
+        public string VerGenero(int numero)
+        {
+            if (numero == 1) return "Macho";
+            if (numero == 2) return "Hembra";
+
+            return String.Empty;
+        }
+
         public string Validator(Cliente datosToValidate)
         {
             if (datosToValidate.apellido.Trim() == "") return "Debes elegir Apellido.";

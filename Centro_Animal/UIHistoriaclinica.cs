@@ -28,7 +28,7 @@ namespace Centro_AnimalUI
         public UIHistoriaclinica(Regisanimal regisanimal)
         {
             InitializeComponent();
-            label1datosmascota.Text = "Mascota: " + regisanimal.NombreAnimal + "    ID: " + regisanimal.IDanimal + "\nEspecie: " + validaciones.VerEspecie(regisanimal.especie)+"    Raza: "+regisanimal.raza+"\nGenero: "+regisanimal.sexo; 
+            label1datosmascota.Text = "Mascota: " + regisanimal.NombreAnimal + "    ID: " + regisanimal.IDanimal + "\nEspecie: " + validaciones.VerEspecie(regisanimal.especie)+"    Raza: "+regisanimal.raza+"\nGenero: " +validaciones.VerGenero(regisanimal.sexo); 
             regisanimal1=regisanimal;
             tratamientos=dataService.GETtratamientos(regisanimal.IDanimal);
             clientes=dataService.GETCleintesconanimal(regisanimal.IDDuenio);
@@ -49,7 +49,9 @@ namespace Centro_AnimalUI
                     {
                         a = item2.nombre;
                     }
-                    labelhistoriaclin.Text=labelhistoriaclin.Text+item.datoshistorial + "\nFecha de consulta :" + item.fechaactual.ToShortDateString() + "\nMedico que lo asistio: " + a + "\nProxima consulta :" + item.fechaproxima.ToShortDateString() + "\n----------------------------------------------------------\n";
+                    labelhistoriaclin.Text=labelhistoriaclin.Text+item.datoshistorial + "\nFecha de consulta :"
+                        + item.fechaactual.ToShortTimeString() + "\nMedico que lo asistio: " + a + "\nProxima consulta :"
+                        + item.fechaproxima.ToShortTimeString() + "\n----------------------------------------------------------\n";
                 }            
                   
             }
