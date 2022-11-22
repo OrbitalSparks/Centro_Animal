@@ -244,6 +244,8 @@
             this.telefono,
             this.Direccion,
             this.DirecNum});
+            this.dataGridViewclient.EnableHeadersVisualStyles = false;
+            this.dataGridViewclient.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.dataGridViewclient.Location = new System.Drawing.Point(42, 439);
             this.dataGridViewclient.Name = "dataGridViewclient";
             this.dataGridViewclient.ReadOnly = true;

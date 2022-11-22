@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.dataGridViewclient2 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dueño = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +42,7 @@
             this.FechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fechanac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewclient2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,18 +99,7 @@
             this.dataGridViewclient2.Size = new System.Drawing.Size(989, 407);
             this.dataGridViewclient2.TabIndex = 4;
             this.dataGridViewclient2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewclient2_CellClick);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(1022, 337);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 97);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Volver";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dataGridViewclient2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewclient2_CellContentClick);
             // 
             // Id
             // 
@@ -177,6 +166,18 @@
             this.Genero.Name = "Genero";
             this.Genero.ReadOnly = true;
             this.Genero.Width = 80;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(1022, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 97);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Volver";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UIPacientes
             // 

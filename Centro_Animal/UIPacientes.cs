@@ -89,15 +89,20 @@ namespace Centro_AnimalUI
         }
 
         private void dataGridViewclient2_CellClick(object sender, DataGridViewCellEventArgs e)
-{
-            animatesconduenio.IDanimal = int.Parse(dataGridViewclient2.SelectedCells[0].Value.ToString());
-            animatesconduenio.NombreAnimal = dataGridViewclient2.SelectedCells[1].Value.ToString();
-            animatesconduenio.nombre = dataGridViewclient2.SelectedCells[2].Value.ToString();
-            animatesconduenio.IDDuenio = int.Parse(dataGridViewclient2.SelectedCells[3].Value.ToString());
-            animatesconduenio.especie = int.Parse(dataGridViewclient2.SelectedCells[4].Value.ToString());
-            animatesconduenio.raza = dataGridViewclient2.SelectedCells[5].Value.ToString();
-            animatesconduenio.PesoAnimal = double.Parse(dataGridViewclient2.SelectedCells[6].Value.ToString());
-            animatesconduenio.sexo = int.Parse(dataGridViewclient2.SelectedCells[9].Value.ToString()); ;
+            {
+
+            if (dataGridViewclient2.SelectedCells[0].Value!=null)
+            {
+                animatesconduenio.IDanimal = int.Parse(dataGridViewclient2.SelectedCells[0].Value.ToString());
+                animatesconduenio.NombreAnimal = dataGridViewclient2.SelectedCells[1].Value.ToString();
+                animatesconduenio.nombre = dataGridViewclient2.SelectedCells[2].Value.ToString();
+                animatesconduenio.IDDuenio = int.Parse(dataGridViewclient2.SelectedCells[3].Value.ToString());
+                animatesconduenio.especie = int.Parse(dataGridViewclient2.SelectedCells[4].Value.ToString());
+                animatesconduenio.raza = dataGridViewclient2.SelectedCells[5].Value.ToString();
+                animatesconduenio.PesoAnimal = double.Parse(dataGridViewclient2.SelectedCells[6].Value.ToString());
+                animatesconduenio.sexo = int.Parse(dataGridViewclient2.SelectedCells[9].Value.ToString()); ;
+            }
+            
 
         }
 
@@ -106,6 +111,11 @@ namespace Centro_AnimalUI
             UICentro uICentro = new UICentro();
             uICentro.Show();
             this.Close();
+        }
+
+        private void dataGridViewclient2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }   

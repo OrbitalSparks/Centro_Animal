@@ -52,15 +52,37 @@ namespace Centro_AnimalUI
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {
+
+            string ResponseValidator;
             client.nombre = textBoxNombre.Text;
             client.apellido = textBoxapellido.Text;
             client.Telefono = int.Parse(textBoxtelefono.Text);
-            client.DNI = int.Parse(textBoxdni.Text);
-            client.id = int.Parse(textBoxid.Text);
+            client.DNI = int.Parse(textBoxdni?.Text);
+            if (client.id!=null)
+            {
+                client.id = int.Parse(textBoxid?.Text);
+            }
             client.Calle = textBoxdireccion.Text;
-            client.Numero = int.Parse(textBoxdireccionnumero.Text);
-            a = dataService.MODIFCliente(client);
+            client.Numero = int.Parse(textBoxdireccionnumero?.Text);
+            
             metele();
+
+            ResponseValidator = validaciones.Validator(client);
+
+            if (ResponseValidator == string.Empty)
+            {
+                a = dataService.MODIFCliente(client);
+                dataGridViewclient.Rows.Clear();
+                clientes = dataService.GETCleintes();
+                llenartabla();
+
+            }
+            else
+            {
+                MessageBox.Show(ResponseValidator);
+            }
+
+
         }
 
         public void llenartabla()
@@ -97,13 +119,19 @@ namespace Centro_AnimalUI
 
         private void dataGridViewclient_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            textBoxid.Text = dataGridViewclient.SelectedCells[0].Value.ToString();
-            textBoxNombre.Text = dataGridViewclient.SelectedCells[1].Value.ToString();
-            textBoxapellido.Text = dataGridViewclient.SelectedCells[2].Value.ToString();
-            textBoxdni.Text = dataGridViewclient.SelectedCells[3].Value.ToString();
-            textBoxtelefono.Text = dataGridViewclient.SelectedCells[4].Value.ToString();
-            textBoxdireccion.Text = dataGridViewclient.SelectedCells[5].Value.ToString();
-            textBoxdireccionnumero.Text = dataGridViewclient.SelectedCells[6].Value.ToString();
+            if (dataGridViewclient.SelectedCells[0].Value !=null)
+            {
+                textBoxid.Text = dataGridViewclient.SelectedCells[0].Value.ToString();
+                textBoxNombre.Text = dataGridViewclient.SelectedCells[1].Value.ToString();
+                textBoxapellido.Text = dataGridViewclient.SelectedCells[2].Value.ToString();
+                textBoxdni.Text = dataGridViewclient.SelectedCells[3].Value.ToString();
+                textBoxtelefono.Text = dataGridViewclient.SelectedCells[4].Value.ToString();
+                textBoxdireccion.Text = dataGridViewclient.SelectedCells[5].Value.ToString();
+                textBoxdireccionnumero.Text = dataGridViewclient.SelectedCells[6].Value.ToString();
+            }
+
+
+            
         }
 
         private void buttonRegistrar_Click(object sender, EventArgs e)
