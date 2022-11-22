@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Centro_animal.Entities
 {
-    public class Cliente : Persona
+    public class AnimalSEXO
     {
-        public int idmascota { get; set; }
-        public Cliente()
-        {
-        }
-
+        public int Id { get; set; }
+        public string sexo { get; set; }
 
     }
 }

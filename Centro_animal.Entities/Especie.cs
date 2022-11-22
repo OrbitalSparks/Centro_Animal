@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace Centro_animal.Entities
 {
-    public class Cliente : Persona
+    public class Especie
     {
-        public int idmascota { get; set; }
-        public Cliente()
-        {
-        }
-
-
+        public int idespecie { get; set; }
+        public string nombreEspecie { get; set; }
     }
 }

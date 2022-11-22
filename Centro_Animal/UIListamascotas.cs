@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Centro_animal.Entities;
+using Centro_Animal;
+using Centro_animal_Services;
 using Centro_animalDB;
 
 namespace Centro_AnimalUI
@@ -15,28 +17,43 @@ namespace Centro_AnimalUI
     public partial class UIListamascotas : Form
     {
 
-        
-       
+        DataService dataService = new DataService();
+        List<Regisanimal> listaanimatesconduenio = new List<Regisanimal>();
+
         public UIListamascotas()
         {
             InitializeComponent();
-            Listamascotas listamascotas = new Listamascotas();
-            foreach (Animal listaM in listamascotas.GetAnimales())
-            {
-                int n = dataGridView1.Rows.Add();
-
-                dataGridView1.Rows[n].Cells[0].Value= listaM.IDanimal ;
-                dataGridView1.Rows[n].Cells[1].Value = listaM.NombreAnimal;
-                dataGridView1.Rows[n].Cells[2].Value = listaM.raza;
-                dataGridView1.Rows[n].Cells[3].Value = listaM.IDDuenio;
-                dataGridView1.Rows[n].Cells[4].Value = listaM.PesoAnimal+" Kg/s";
-            }
-   
+            listaanimatesconduenio = dataService.GETlistaconduenio();
+            llenartabla();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        public void llenartabla()
+        {
+
+            foreach (Regisanimal mascota in listaanimatesconduenio)
+            {
+                int n = dataGridViewclient2.Rows.Add();
+                dataGridViewclient2.Rows[n].Cells[0].Value = mascota.IDanimal;
+                dataGridViewclient2.Rows[n].Cells[1].Value = mascota.NombreAnimal;
+                dataGridViewclient2.Rows[n].Cells[2].Value = mascota.nombre;
+                dataGridViewclient2.Rows[n].Cells[3].Value = mascota.IDDuenio;
+                dataGridViewclient2.Rows[n].Cells[4].Value = mascota.especie;
+                dataGridViewclient2.Rows[n].Cells[5].Value = mascota.raza;
+                dataGridViewclient2.Rows[n].Cells[6].Value = mascota.PesoAnimal;
+                dataGridViewclient2.Rows[n].Cells[7].Value = mascota.fechaIngreso;
+                dataGridViewclient2.Rows[n].Cells[8].Value = mascota.fechaNacimento;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UICentro uICentro = new UICentro();
+            uICentro.Show();
+            this.Close();
         }
     }
 }
