@@ -99,7 +99,7 @@ namespace Centro_AnimalUI
                 dataGridViewclient2.Rows.Clear();
                 listaanimatesconduenio = dataService.GETlistaconduenio();
                 llenartabla();
-
+                //
             }
             else
             {
