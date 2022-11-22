@@ -1,6 +1,6 @@
 ﻿namespace Centro_AnimalUI
 {
-    partial class UIListamascotas
+    partial class UIPacientes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonmascotaselec = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.dataGridViewclient2 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,22 +41,40 @@
             this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fechanac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewclient2)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // buttonmascotaselec
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.dataGridViewclient2);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(25, 41);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(992, 542);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Lista Mascotas";
+            this.buttonmascotaselec.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonmascotaselec.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonmascotaselec.Location = new System.Drawing.Point(1022, 169);
+            this.buttonmascotaselec.Name = "buttonmascotaselec";
+            this.buttonmascotaselec.Size = new System.Drawing.Size(142, 97);
+            this.buttonmascotaselec.TabIndex = 7;
+            this.buttonmascotaselec.Text = "Seleccionar";
+            this.buttonmascotaselec.UseVisualStyleBackColor = true;
+            this.buttonmascotaselec.Click += new System.EventHandler(this.buttonmascotaselec_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Historic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(74, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(207, 32);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Buscar Mascota :";
+            // 
+            // textBoxBusqueda
+            // 
+            this.textBoxBusqueda.Location = new System.Drawing.Point(330, 54);
+            this.textBoxBusqueda.Name = "textBoxBusqueda";
+            this.textBoxBusqueda.Size = new System.Drawing.Size(260, 23);
+            this.textBoxBusqueda.TabIndex = 5;
+            this.textBoxBusqueda.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // dataGridViewclient2
             // 
@@ -69,13 +89,14 @@
             this.Peso,
             this.FechaIngreso,
             this.Fechanac});
-            this.dataGridViewclient2.Location = new System.Drawing.Point(6, 55);
+            this.dataGridViewclient2.Location = new System.Drawing.Point(22, 136);
             this.dataGridViewclient2.Name = "dataGridViewclient2";
             this.dataGridViewclient2.ReadOnly = true;
             this.dataGridViewclient2.RowTemplate.Height = 25;
             this.dataGridViewclient2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewclient2.Size = new System.Drawing.Size(983, 381);
-            this.dataGridViewclient2.TabIndex = 3;
+            this.dataGridViewclient2.Size = new System.Drawing.Size(973, 394);
+            this.dataGridViewclient2.TabIndex = 4;
+            this.dataGridViewclient2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewclient2_CellClick);
             // 
             // Id
             // 
@@ -137,36 +158,40 @@
             this.Fechanac.ReadOnly = true;
             this.Fechanac.Width = 120;
             // 
-            // button2
+            // button1
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(386, 459);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(182, 70);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Volver";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(1022, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 97);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Volver";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // UIListamascotas
+            // UIPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
-            this.ClientSize = new System.Drawing.Size(1061, 582);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "UIListamascotas";
+            this.ClientSize = new System.Drawing.Size(1197, 554);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxBusqueda);
+            this.Controls.Add(this.buttonmascotaselec);
+            this.Controls.Add(this.dataGridViewclient2);
+            this.Name = "UIPacientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UIListamascotas";
-            this.groupBox1.ResumeLayout(false);
+            this.Text = "UIPacientes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewclient2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private GroupBox groupBox1;
+        private TextBox textBoxBusqueda;
         private DataGridView dataGridViewclient2;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn nombre;
@@ -177,6 +202,8 @@
         private DataGridViewTextBoxColumn Peso;
         private DataGridViewTextBoxColumn FechaIngreso;
         private DataGridViewTextBoxColumn Fechanac;
-        private Button button2;
+        private Label label1;
+        private Button buttonmascotaselec;
+        private Button button1;
     }
 }

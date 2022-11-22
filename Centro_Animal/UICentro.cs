@@ -29,19 +29,23 @@ namespace Centro_Animal
 
         private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UIRegistroCliente uIRegistroCliente = new UIRegistroCliente();
+            UIRegistroCliente uIRegistroCliente = new UIRegistroCliente(1);
             uIRegistroCliente.Show();
+            this.Hide();
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
            UIRegistrarmascota uIRegistrarmascota=new UIRegistrarmascota();
-            uIRegistrarmascota.Show();        }
+            uIRegistrarmascota.Show();
+            this.Hide();
+        }
 
         private void listaMascotasToolStripMenuItem_Click(object sender, EventArgs e)
         {
            UIListamascotas uIListamascotas=new UIListamascotas();
            uIListamascotas.Show();
+            this.Hide();
 
         }
 
@@ -49,6 +53,26 @@ namespace Centro_Animal
         {
             UIListaClientes uIListaClientes=new UIListaClientes();
             uIListaClientes.Show();
+            this.Hide();
+        }
+
+        private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tratamientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UIPacientes uIPacientes = new UIPacientes();
+            uIPacientes.Show();
+            this.Hide();
+        }
+
+        private void editarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UIRegistroCliente uIRegistroCliente = new UIRegistroCliente("1");
+            uIRegistroCliente.Show();
+            this.Hide();
         }
     }
 }

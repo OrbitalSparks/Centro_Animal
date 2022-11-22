@@ -8,12 +8,10 @@ namespace DDJJAdministrator.Entities
 {
     public class Usuario
     {
-        public int Id { get; set; } 
+        public int IDEmpleado { get; set; } 
         public string Login { get; set; }
         public string Password { get; set; }
-        public String nombre { get; set; }
-        public String apellidos { get; set; }
-        public int DNI { get; set; }
+
 
 
     }
