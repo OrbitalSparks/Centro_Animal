@@ -1,6 +1,5 @@
 using Centro_animal.Entities;
 using Centro_Animal;
-using DDJJDesktop;
 
 namespace Centro_AnimalUI
 {
@@ -15,7 +14,7 @@ namespace Centro_AnimalUI
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmCredential());
+            Application.Run(new FormLogin());
         }
     }
 }

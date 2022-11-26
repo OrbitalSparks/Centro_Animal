@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Centro_animal.Entities;
 using Dapper;
 
 namespace Centro_animal_Services
@@ -25,6 +26,16 @@ namespace Centro_animal_Services
             return lsitResuslt;
         }
 
+        public Usuario GBDOperation2(string SlqQuery)
+        {
+            Usuario lsitResuslt;
+            // string sql = "SELECT IdDepart, Nombredepart FROM Departamento ORDER BY IdDepart";
+            using (var connection = new SqlConnection(StringConeccion))
+            {
+                lsitResuslt = (Usuario)connection.Query(SlqQuery);
+            }
+            return lsitResuslt;
+        }
         //        public void Operationexecute( DeclaracionJurada declaracionJurada) {
 
         //            string sql = "INSERT INTO Declarajada (IdPersona, FechaIngreso, IdStatus, Fechacreacion) Values ( @dPersona, @FechaIngreso, @IdStatus, @Fechacreacion);";

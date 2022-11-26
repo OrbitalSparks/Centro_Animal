@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.dataGridViewclient2 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,7 +40,6 @@
             this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fechanac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewclient2)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,17 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista Mascotas";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(386, 459);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(182, 70);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Volver";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridViewclient2
             // 
@@ -74,7 +85,7 @@
             this.dataGridViewclient2.ReadOnly = true;
             this.dataGridViewclient2.RowTemplate.Height = 25;
             this.dataGridViewclient2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewclient2.Size = new System.Drawing.Size(983, 381);
+            this.dataGridViewclient2.Size = new System.Drawing.Size(970, 381);
             this.dataGridViewclient2.TabIndex = 3;
             // 
             // Id
@@ -136,17 +147,6 @@
             this.Fechanac.Name = "Fechanac";
             this.Fechanac.ReadOnly = true;
             this.Fechanac.Width = 120;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(386, 459);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(182, 70);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Volver";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // UIListamascotas
             // 

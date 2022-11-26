@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="UICentro.Designer.cs~RF62fd5e.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Centro_animal.Entities\Centro_animal.Entities.csproj" />
     <ProjectReference Include="..\Centro_animalDB\Centro_animalDB.csproj" />
     <ProjectReference Include="..\Centro_animal_Services\Centro_animal_Services.csproj" />

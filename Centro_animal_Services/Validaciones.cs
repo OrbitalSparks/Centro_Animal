@@ -45,6 +45,22 @@ namespace Centro_animal_Services
             return String.Empty;
 
 
+          
+        }
+
+        public string Validatorfecha(Tratamiento tratamiento) {
+            if (tratamiento.datoshistorial.Trim() == "") return "Escriba una consulta";
+            if (tratamiento.Proximafecha < DateTime.Now) return "Error de fecha";         
+            return String.Empty;
+        }
+        
+        public void Autenticar(string login, string password)
+        {
+            List<Usuario> listusers = new List<Usuario>();
+            DataService dataService = new DataService();
+            
+            return ;
+
         }
     }
 }

@@ -1,6 +1,5 @@
 using Centro_animal.Entities;
 using Centro_AnimalUI;
-using DDJJAdministrator.Entities;
 
 namespace Centro_Animal
 {
@@ -73,6 +72,11 @@ namespace Centro_Animal
             UIRegistroCliente uIRegistroCliente = new UIRegistroCliente("1");
             uIRegistroCliente.Show();
             this.Hide();
+        }
+
+        private void UICentro_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

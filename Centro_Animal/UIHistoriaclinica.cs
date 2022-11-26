@@ -50,8 +50,8 @@ namespace Centro_AnimalUI
                         a = item2.nombre;
                     }
                     labelhistoriaclin.Text=labelhistoriaclin.Text+item.datoshistorial + "\nFecha de consulta :"
-                        + item.fechaactual.ToShortTimeString() + "\nMedico que lo asistio: " + a + "\nProxima consulta :"
-                        + item.fechaproxima.ToShortTimeString() + "\n----------------------------------------------------------\n";
+                        + item.Ultimafecha.ToShortDateString() + "\nMedico que lo asistio: " + a + "\nProxima consulta :"
+                        + item.Proximafecha.ToShortDateString() + "\n----------------------------------------------------------\n";
                 }            
                   
             }
@@ -64,6 +64,7 @@ namespace Centro_AnimalUI
 
         private void button1nuevaconsulta_Click(object sender, EventArgs e)
         {
+
            UITratamientos uITratamientos = new UITratamientos(regisanimal1);
             uITratamientos.Show();
         }

@@ -15,6 +15,19 @@ namespace Centro_animal_Services
     public class DataService
     {
         private int datos;
+        private string datouser;
+        private string datopass;
+
+        public List<Usuario> LoginMain(string username,string pass)
+        {
+
+            BDOperation<Usuario> listaDB = new BDOperation<Usuario>();
+            List<Usuario> user = new List<Usuario>();
+            string sql = "select * from Usuario where username='"+username+"' and userpassword='" +pass+ "'";
+           // string sql = "select username,userpassword from Usuario where username="+datosu.username+" and userpassword="+datosu.userpassword+"";
+            user = listaDB.GBDOperation<Usuario>(sql);
+            return user = listaDB.GBDOperation<Usuario>(sql);
+        }
 
         public List<Tratamiento> GETtratamientos(int dato)
         {
@@ -22,6 +35,8 @@ namespace Centro_animal_Services
             BDOperation<Tratamiento> listaDB = new BDOperation<Tratamiento>();
             List<Tratamiento> ListClientes = new List<Tratamiento>();
             
+
+             //string sql = "select IDAnimalhistorial,Datoshistorial,IDVeterinario,Ultimafecha,Proximafecha,IDTRAT from historialMED where IDAnimalhistorial=" + dato + "";
             string sql = "SELECT * FROM historialMED where IDAnimalhistorial=" + dato +"";
 
             ListClientes = listaDB.GBDOperation<Tratamiento>(sql);
@@ -188,11 +203,11 @@ namespace Centro_animal_Services
             var listparams = new
             {
 
-               idanimal=  tratamiento.IDanimalhistoiral,
+               idanimal=  tratamiento.IDAnimalhistoiral,
                idvet=tratamiento.IDVeterinario,
                datoshisto=tratamiento.datoshistorial,
-               ultfec=tratamiento.fechaactual,
-               proxfe=tratamiento.fechaproxima
+               ultfec=tratamiento.Ultimafecha,
+               proxfe=tratamiento.Proximafecha
             };
 
 

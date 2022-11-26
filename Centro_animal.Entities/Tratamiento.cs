@@ -9,13 +9,13 @@ namespace Centro_animal.Entities
 {
     public class Tratamiento
     {
-        public int IDanimalhistoiral { get; set; }
-        public int IDVeterinario { get; set; }
+        public int IDAnimalhistoiral { get; set; }
         public string datoshistorial { get; set; }
-        public DateTime fechaactual { get; set; }
-        public DateTime fechaproxima { get; set; }
-       
-
+        public int IDVeterinario { get; set; }
+        public DateTime Ultimafecha { get; set; }
+        public DateTime Proximafecha { get; set; }
+        public int idtrat { get; set; }
+        
 
 
 

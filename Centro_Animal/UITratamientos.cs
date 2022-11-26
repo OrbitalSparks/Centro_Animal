@@ -34,14 +34,28 @@ namespace Centro_AnimalUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tratamiento.fechaactual=DateTime.Now;
-            tratamiento.fechaproxima = dateTimePicker1.Value;
-            tratamiento.IDanimalhistoiral = regisanimal2.IDanimal;
+            tratamiento.Ultimafecha=DateTime.Now;
+            tratamiento.Proximafecha = dateTimePicker1.Value;
+            tratamiento.IDAnimalhistoiral = regisanimal2.IDanimal;
             tratamiento.datoshistorial = richTextBox1.Text.ToString();
             tratamiento.IDVeterinario = (int)comboBox1.SelectedValue;
-            a = dataService.CrearConsulta(tratamiento);
-            MessageBox.Show("consulta Agregada");
-            this.Close();
+
+            string ResponseValidator;
+            ResponseValidator = validaciones.Validatorfecha(tratamiento);
+
+            if (ResponseValidator == string.Empty)
+            {
+
+                a = dataService.CrearConsulta(tratamiento);
+                MessageBox.Show("consulta Agregada");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show(ResponseValidator);
+            }
+            
+           
 
 
         }
