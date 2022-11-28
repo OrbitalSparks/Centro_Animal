@@ -56,12 +56,25 @@ namespace Centro_AnimalUI
             string ResponseValidator;
             client.nombre = textBoxNombre.Text;
             client.apellido = textBoxapellido.Text;
-            client.Telefono = int.Parse(textBoxtelefono.Text);
-            client.DNI = int.Parse(textBoxdni?.Text);
-            if (client.id!=null)
+            if (textBoxtelefono.Text.Length < 1)
             {
-                client.id = int.Parse(textBoxid?.Text);
+                client.Telefono = 0;
             }
+            else { client.Telefono = int.Parse(textBoxtelefono.Text); }
+           
+            //client.DNI = int.Parse(textBoxdni?.Text);
+            if (textBoxdni.Text.Length < 1)
+            {
+                client.DNI = 0;
+            }
+            else { client.DNI = int.Parse(textBoxdni.Text); }
+
+            if (textBoxid.Text.Length < 1)
+            {
+                client.id = 0;
+            }
+            else { client.id = int.Parse(textBoxid.Text); }
+            
             client.Calle = textBoxdireccion.Text;
             client.Numero = int.Parse(textBoxdireccionnumero?.Text);
             //
@@ -75,6 +88,7 @@ namespace Centro_AnimalUI
                 dataGridViewclient.Rows.Clear();
                 clientes = dataService.GETCleintes();
                 llenartabla();
+                MessageBox.Show("Datos Modificado");
 
             }
             else
@@ -140,9 +154,16 @@ namespace Centro_AnimalUI
 
                 client.nombre = textBoxNombre.Text;
                 client.apellido = textBoxapellido.Text;
-                client.Telefono = int.Parse(textBoxtelefono.Text);
-                client.DNI = int.Parse(textBoxdni.Text);
-                //client.id = int.Parse(textBoxid.Text);
+                if (textBoxtelefono.Text.Length < 1)
+                {
+                    client.Telefono = 0;
+                }
+                else { client.Telefono = int.Parse(textBoxtelefono.Text); }
+                if (textBoxdni.Text.Length < 1)
+                {
+                    client.DNI = 0;
+                }
+                else { client.DNI = int.Parse(textBoxdni.Text); }
                 client.Calle = textBoxdireccion.Text;
                 client.Numero = int.Parse(textBoxdireccionnumero.Text);
                 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Centro_animal.Entities;
+using NPOI.OpenXmlFormats.Dml;
 
 namespace Centro_animal_Services
 {
@@ -31,8 +32,10 @@ namespace Centro_animal_Services
             if (datosToValidate.apellido.Trim() == "") return "Debes elegir Apellido.";
             if (datosToValidate.nombre.Trim()=="" ) return "Debes elegir un Nombre.";
             if (datosToValidate.DNI < 8) return "Error en el DNI.";
+            if (datosToValidate.id == 0) return "Cliente vacio.";
             if (datosToValidate.Calle.Trim() == "") return "Debes elegir una Direccion.";
-            if (datosToValidate.Numero <1) return "Debes elegir un numero de calle";
+            if (datosToValidate.Numero < 1  ) return "Debes elegir un numero de calle";
+            if (datosToValidate.Telefono < 1 || datosToValidate.Telefono==0) return "Debes elegir un numero de telefono";
             return String.Empty;
 
 

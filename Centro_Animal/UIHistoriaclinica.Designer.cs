@@ -37,13 +37,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelhistoriaclin = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1datosduenio = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1datosduenio = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -59,6 +61,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.buttonvolver);
             this.tabPage1.Controls.Add(this.button1nuevaconsulta);
             this.tabPage1.Controls.Add(this.label1datosmascota);
@@ -131,6 +134,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Datos Dueño";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(36, 345);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(778, 223);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1datosduenio
             // 
             this.label1datosduenio.AutoSize = true;
@@ -141,15 +154,15 @@
             this.label1datosduenio.TabIndex = 0;
             this.label1datosduenio.Text = "Sin Datos del Dueño";
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 360);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(771, 208);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(479, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(330, 143);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // UIHistoriaclinica
             // 
@@ -168,6 +181,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +198,6 @@
         private Button buttonvolver;
         private Panel panel1;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }

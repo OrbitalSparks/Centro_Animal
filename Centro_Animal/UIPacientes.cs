@@ -47,12 +47,12 @@ namespace Centro_AnimalUI
                 dataGridViewclient2.Rows[n].Cells[1].Value = mascota.NombreAnimal;
                 dataGridViewclient2.Rows[n].Cells[2].Value = mascota.nombre;
                 dataGridViewclient2.Rows[n].Cells[3].Value = mascota.IDDuenio;
-                dataGridViewclient2.Rows[n].Cells[4].Value = validaciones.VerEspecie(mascota.especie);
+                dataGridViewclient2.Rows[n].Cells[4].Value = mascota.especie;
                 dataGridViewclient2.Rows[n].Cells[5].Value = mascota.raza;
                 dataGridViewclient2.Rows[n].Cells[6].Value = mascota.PesoAnimal;
                 dataGridViewclient2.Rows[n].Cells[7].Value = mascota.fechaIngreso;
                 dataGridViewclient2.Rows[n].Cells[8].Value = mascota.fechaNacimento;
-                dataGridViewclient2.Rows[n].Cells[9].Value = validaciones.VerGenero(mascota.sexo);
+                dataGridViewclient2.Rows[n].Cells[9].Value = mascota.sexo;
             }
         }
         private void cargardatosfiltrado(string dato)
